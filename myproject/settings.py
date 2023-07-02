@@ -125,3 +125,31 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(STATIC_ROOT, 'media')
 MEDIA_URL = '/media/'
 
+
+# Default primary key field type
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
+# Django crispy forms
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# Django ckeditor
+CKEDITOR_UPLOAD_PATH = 'ckeditor/'
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter',
+             'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink'],
+            ['RemoveFormat', 'Source'],
+            ['Format', 'Font', 'FontSize'],
+            ['TextColor', 'BGColor'],
+        ],
+        'height': 300,
+        'width': '100%',
+        'allowedContent': True,
+    },
+}
+
+
